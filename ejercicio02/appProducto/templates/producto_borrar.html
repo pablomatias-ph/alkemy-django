@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Borrar Producto de la base de datos</title>
+</head>
+<body>
+    <style>
+        *{text-align: center;}
+    </style>
+    <h1>¿Esta seguro que quiere borrar "{{ producto.nombre }}"?</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        <input type="submit" value="Si, borrar">
+    </form>
+    <a href="{% url 'productoDetalle' producto.id %}">Cancelar</a>
+</body>
+</html>

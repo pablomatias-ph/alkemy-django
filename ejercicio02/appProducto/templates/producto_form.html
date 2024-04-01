@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de carga / modificaicón de Productos</title>
+</head>
+<body>
+    <style>
+        *{text-align: center;}
+    </style>
+    <h1>Formulario de carga / modificaicón de Productos</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        <label for="nombre">Nombre producto:</label><br>
+        <input type="text" id="nombre" name="nombre" value="{% if producto %}{{ producto.nombre }}{% endif %}"><br>
+        <label for="descripcion">Descripción:</label><br>
+        <textarea id="descripcion" name="descripcion">{% if producto %}{{ producto.descripcion }}{% endif %}</textarea><br>
+        <label for="precio">Precio:</label><br>
+        <input type="text" id="precio" name="precio" value="{% if producto %}{{ producto.precio }}{% endif %}"><br>
+        <br><br>
+        <input type="submit" value="Cargar">
+    </form>
+    <br>
+    <a href="{% url 'productoLista' %}"><input type="submit" value="Cancelar"></a>
+</body>
+</html>

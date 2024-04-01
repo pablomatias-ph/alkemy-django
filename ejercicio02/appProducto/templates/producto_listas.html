@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de PRODUCTOS</title>
+</head>
+<body>
+    <style>
+        *{text-align: center;}
+    </style>
+    <br>
+    <h2>Lista de Productos</h2>
+    <h2>_______________________</h2><br>
+    {% for producto in productos %}
+        <div id="producto">
+            <h3><a href="{% url 'productoDetalle' producto.id %}">{{ producto.nombre }}</a></h3>
+            <p>••••••••••••••••••</p>
+        </div>
+    {% endfor %}
+    <a href="{% url 'productoCreate' %}"><input type="submit" value="Cargar nuevo producto"></a>
+</body>
+</html>

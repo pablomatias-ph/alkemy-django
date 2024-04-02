@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todos los USUARIOS</title>
+    <style>*{text-align: center;}</style>
+</head>
+<body>
+    <br>
+    <h2>Todos los Usuarios</h2>
+    <h2>_______________________</h2><br>
+    <ul>
+        {% for usuario in usuarios %}
+        <li>{{ usuario.nombre }} {{ usuario.apellido }}, {{ usuario.edad }} años</li>
+        {% endfor %}
+    </ul>
+
+
+</body>
+</html>

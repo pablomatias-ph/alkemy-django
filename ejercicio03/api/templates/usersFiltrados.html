@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtrado de usuario</title>
+    <style>*{text-align: center;}</style>
+</head>
+<body>
+    <br>
+    <h2>Usuarios filtrados por edades</h2>
+    <h2>_______________________</h2><br>
+    {% for usuario in datosFiltrados %}
+        <li>{{ usuario.nombre }} {{ usuario.apellido }}, {{ usuario.edad }} años</li>
+    {% endfor %}
+
+
+</body>
+</html>

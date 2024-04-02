@@ -28,14 +28,14 @@ def filtrarEdad(request):
 
 def actualizarEstudiante(request, id):
     actualizarNota = Estudiante.objects.get(id=id)
-    actualizarNota.id = 5
+    actualizarNota.nota = 8
     actualizarNota.save()
     return render(request, 'actualizarNota.html', {'actualizarNota': actualizarNota})
 
 # Eliminar Estudiante mediante ID
 
 def borrarEstudiante(request, id):
-    borrarEstudiante = Usuario.objects.get(id = id)
+    borrarEstudiante = Estudiante.objects.get(id = id)
     borrarEstudiante.delete()
     estudiantes = Estudiante.objects.all()
     return render(request, 'listaEstudiantes.html', {'estudiantes': estudiantes})

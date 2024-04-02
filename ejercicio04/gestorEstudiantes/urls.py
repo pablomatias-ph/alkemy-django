@@ -5,6 +5,6 @@ urlpatterns = [
     path('', views.listarEstudiantes),
     path('create/<str:inputnombre>/<str:inputapellido>/<int:inputedad>/<int:inputnota>', views.altaEstudiante),
     path('filter', views.filtrarEdad),
-    path('update/<int:id>/<int:nota>', views.actualizarEstudiante),
+    path('update/<int:id>', views.actualizarEstudiante),
     path('delete/<int:id>', views.borrarEstudiante),
     ]

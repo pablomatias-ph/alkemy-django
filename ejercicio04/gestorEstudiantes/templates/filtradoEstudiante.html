@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filtrado de Estudiante</title>
+  </head>
+  <body>
+    <br />
+    <div style="text-align: center">
+      <h2>Estudiantes mayores 20 años</h2>
+      <h2>_______________________</h2>
+      <br />
+      <ul>
+        {% for estudiante in filtradoEstudiantes %}
+        <li><h3>Alumno: {{ estudiante.nombre }} {{ estudiante.apellido }}</h3></li>
+        <li>Legajo: {{ estudiante.id }}</li>
+        <li>Edad: {{ estudiante.edad }}</li>
+        <li>------------------------------</li>
+        {% endfor %}
+        </ul>
+    </div>
+  </body>
+</html>

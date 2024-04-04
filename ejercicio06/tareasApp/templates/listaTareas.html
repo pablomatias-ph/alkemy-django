@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Listado de Tareas</title>
+  </head>
+  <body>
+    <div style="text-align: center">
+      <h1>Listado de Tareas</h1>
+      {% for tarea in tareas %}
+      <ul>
+        <li>
+          <p>
+            <a href="{% url 'detalleTareas' tarea.id %}"
+              >{{ tarea.tituloTarea }}</a
+            >
+          </p>
+          <p>---------------------------------------</p>
+        </li>
+        {% endfor %}
+      </ul>
+      <br />
+      <a href="{% url 'crearTareas' %}">Crear Nueva</a>
+    </div>
+  </body>
+</html>

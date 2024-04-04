@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Detalle Tarea</title>
+  </head>
+  <body>
+    <div style="text-align: center">
+      <h2>{{ tarea.tituloTarea }}</h2>
+      <p>----------------------------</p>
+      <p>
+        {{ tarea.descripcion }}
+        <a href="{% url 'actualizarTarea' tarea.id %}"
+          ><input type="submit" value="Modificar" /></a
+        ><input type="submit" value="Borrar" />
+      </p>
+      <form action="{% url 'borrarTarea' tarea.id %}" method="post">
+        {% csrf_token %}
+        <br />
+      </form>
+      <a href="{% url 'listaTareas' %}"
+        ><input type="submit" value="Volver a la lista de Tareas"
+      /></a>
+    </div>
+  </body>
+</html>

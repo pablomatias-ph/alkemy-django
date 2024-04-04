@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Crear o Actualizar TAREA</title>
+    </head>
+<body>
+    <div style="text-align: center;">
+        <h1>Crear o Actualizar TAREA</h1>
+        <form action="" method="post">
+            {% csrf_token %}
+            <label for="tituloTareas">Tarea:</label><br>
+            <input type="text" id="tituloTarea" name="tituloTarea" value="{% if tarea %}{{ tarea.tituloTarea }}{% endif %}"><br>
+            <label for="descripcion">Descripcion:</label><br>
+            <textarea id="descripcion" name="descripcion">{% if tarea %}{{ tarea.descripcion }}{% endif %}</textarea><br>
+            <input type="submit" value="Enviar">
+        </form>
+        <a href="{% url 'listaTareas' %}"><input type="submit" value="Cancelar"></a>
+    </div>
+    </body>
+</html>

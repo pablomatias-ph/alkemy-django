@@ -1,0 +1,19 @@
+<main id="lista" class="container">
+<div>
+  <h2>Estudiantes Filosofia que Aprobaron</h2>
+  <h2>_______________________</h2>
+  <br />
+  <ul>
+    {% for estudiante in estudiantes %} {% if estudiante.nota >= 5 %}
+    <li><p>Estudiante: {{ estudiante.nombre }} {{ estudiante.apellido }}</p></li>
+    <li><p>Nota: {{ estudiante.nota }}</p></li>
+    <p>--------------------------------------------------------------</p>
+    {% endif %} {% endfor %}
+  </ul>
+</div>
+<div style="text-align: center">
+  <a href="{% url 'estudiantesCSS' %}"
+    ><input class="btn btn--primary btn--medium" type="submit" value="Volver"
+  /></a>
+</div>
+</main>

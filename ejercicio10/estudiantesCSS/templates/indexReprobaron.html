@@ -5,7 +5,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TesteoApp</title>
+    <title>Control de Alumnos de Filosofia CSS que desaprobaron</title>
     <link
       rel="stylesheet"
       type="text/css"
@@ -14,15 +14,7 @@
   </head>
   <body>
     {% include 'hero.html' %}
-    <main class="main-container">
-      <section class="collection container">
-        <div class="container">
-          <h2 class="collection">TesteoAPP</h2>
-          <button class="btn btn--primary btn--large">Boton grande</button>
-          <button class="btn btn--primary btn--medium">Boton mediano</button>
-        </div>
-      </section>
-    </main>
+    {% include 'listadoReprobaron.html' %}
     {% include 'footer.html' %} {% block content %} {% endblock %}
   </body>
 </html>

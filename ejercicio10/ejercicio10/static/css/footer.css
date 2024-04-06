@@ -1,0 +1,20 @@
+.footer {
+  background-image: url(../img/footer.jpg);
+  padding: var(--spacing-68);
+}
+
+.footer__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-20);
+  align-items: start;
+  z-index: 2;
+  position: relative;
+  color: var(--light-font-solid);
+}
+
+.footer__copy {
+  margin-top: var(--spacing-36);
+  font-size: var(--font-medium);
+  color: var(--light-font-solid);
+}

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Listado de Estudiantes Filosofia</title>
+  </head>
+  <body>
+    <br />
+    <div style="text-align: center">
+      <h2>Todos los Estudiantes Filosofia</h2>
+      <h2>_______________________</h2>
+      <br />
+        <a href="{% url 'listadoFilosofia' %}"><input type="submit" value="Estudiantes de Filosofia"></a>
+        <a href="{% url 'listadoAprobaron' %}"><input type="submit" value="Estudiantes que aprobaron"></a>
+        <a href="{% url 'listadoReprobaron' %}"><input type="submit" value="Estudiantes que reprobaron"></a>
+        
+    </div>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Listado de Estudiantes Filosofia</title>
+  </head>
+  <body>
+    <br />
+    <div style="text-align: center">
+      <h2>Todos los Estudiantes Filosofia</h2>
+      <h2>_______________________</h2>
+      <br />
+        {% for estudiante in estudiantes %}
+        <li>Estudiante: {{estudiante.nombre}} {{estudiante.apellido}}</li>
+        <li>Edad: {{estudiante.edad}}</li>
+        <li>Nota: {{estudiante.nota}}</li>
+        <p>------------------------------</p>
+        {% endfor %}
+    </div>
+    <div style="text-align: center">
+      <a href="{% url 'controlEstudiantes' %}"
+        ><input type="submit" value="Volver"
+      /></a>
+    </div>
+  </body>
+</html>

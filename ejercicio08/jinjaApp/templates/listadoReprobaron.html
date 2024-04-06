@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Estudiantes Filosofia que Reprobaron</title>
+  </head>
+  <body>
+    <br />
+    <div style="text-align: center">
+      <h2>Estudiantes Filosofia que Reprobaron</h2>
+      <h2>_______________________</h2>
+      <br />
+      <ul>
+          {% for estudiante in estudiantes %}
+              {% if estudiante.nota <= 4 %}
+                  <li>Estudiante: {{ estudiante.nombre }} {{ estudiante.apellido }}</li>
+                  <li>Nota: {{ estudiante.nota }}</li>
+                  <p>--------------------------------------------------------------</p>
+              {% endif %}
+          {% endfor %}
+      </ul>
+    </div>
+    <div style="text-align: center">
+      <a href="{% url 'controlEstudiantes' %}"
+        ><input type="submit" value="Volver"
+      /></a>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TesteoApp</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/style.css' %}"
+    />
+  </head>
+  <body>
+    <section class="hero">
+      <!--Hero-->
+      <article class="hero__content container">
+        <h3 class="hero__title">HERO con imagen de fondo</h3>
+        <p class="hero__text">Esto es parrafo en un HERO</p>
+      </article>
+    </section>
+    <!--Fin Hero-->
+    <main class="main-container">
+      <section class="collection container">
+        <div class="container">
+          <h2 class="collection">TesteoAPP</h2>
+          <button class="btn btn--primary btn--large">Boton grande</button>
+          <button class="btn btn--primary btn--medium">Boton mediano</button>
+        </div>
+      </section>
+    </main>
+    {% include 'footer.html' %}
+    {% block content %}
+    {% endblock %}
+  </body>
+</html>
